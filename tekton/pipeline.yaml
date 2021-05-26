@@ -13,12 +13,12 @@ spec:
     - name: image-repo
       type: string
       description: Docker image name
-      default: quay.io/lilbank/express-sample-app
+      default: quay.io/ronald_chan/express-sample-app
   tasks:
     - name: clone-repository
       params:
         - name: url
-          value: https://github.com/upslopeio/express-sample-app # My repo
+          value: https://github.com/cloud-native-garage-method-cohort/ronald-bank-day-5-app # My repo
       taskRef:
         kind: Task
         name: git-clone
