@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
-    app.openshift.io/vcs-uri: https://github.com/upslopeio/express-sample-app
+    app.openshift.io/vcs-ref: a3aee7f7585c7425135279ce7780ba573c4b7800
+    app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-cohort/ronald-bank-day-5-app
   labels:
     app: ronald-chan-pipeline-from-scratch
     app.kubernetes.io/instance: ronald-chan-pipeline-from-scratch
@@ -11,7 +11,6 @@ metadata:
     app.openshift.io/runtime: js
   name: ronald-chan-pipeline-from-scratch
 spec:
-  serviceAccountName: build-bot
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
@@ -26,6 +25,7 @@ spec:
         app.kubernetes.io/instance: ronald-chan-pipeline-from-scratch
         app.kubernetes.io/name: ronald-chan-pipeline-from-scratch
     spec:
+      serviceAccountName: build-bot
       containers:
         - env:
             - name: INGRESS_HOST
