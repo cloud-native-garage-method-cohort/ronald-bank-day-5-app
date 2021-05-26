@@ -11,6 +11,7 @@ metadata:
     app.openshift.io/runtime: js
   name: ronald-chan-pipeline-from-scratch
 spec:
+  serviceAccountName: build-bot
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
