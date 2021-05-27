@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
     openshift.io/host.generated: "true"
-  name: akpfs
+  name: rcpfs
 spec:
   tls:
     termination: edge
